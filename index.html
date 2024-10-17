@@ -13,9 +13,23 @@
             <button id="play-btn">Play</button>
             <button id="pause-btn">Pausa</button>
             <button id="stop-btn">Stop</button>
+            <button id="live-btn">Live</button>
+            <button id="serial-monitor-btn">Apri Monitor Seriale</button>
             <button id="save-btn">Salva Progetto</button>
+            <label for="load-btn" id="load-label">Carica Progetto</label>
             <input type="file" id="load-btn" accept=".vik" />
         </div>
+
+        <!-- Modale per rinominare la striscia -->
+        <div id="rename-modal" class="modal">
+            <div class="modal-content">
+                <span id="rename-cancel-btn" class="close">&times;</span>
+                <h2>Rinomina Striscia</h2>
+                <input type="text" id="rename-input" />
+                <button id="rename-confirm-btn">Conferma</button>
+            </div>
+        </div>
+
         <!-- Includi lo script principale -->
         <script type="module" src="/src/main.js"></script>
     </body>

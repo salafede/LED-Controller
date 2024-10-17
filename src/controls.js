@@ -19,7 +19,7 @@ export function initControls(
     renderer.domElement.addEventListener("mouseup", onMouseUp, false);
     renderer.domElement.addEventListener("click", onMouseClick, false);
 
-    // Event handler for mousedown
+    // Event handler per mousedown
     function onMouseDown(event) {
         isMouseDown = true;
         mouseX = event.clientX;
@@ -27,7 +27,7 @@ export function initControls(
         isDragging = false;
     }
 
-    // Event handler for mousemove
+    // Event handler per mousemove
     function onMouseMove(event) {
         if (isMouseDown) {
             const dx = event.clientX - mouseX;
@@ -38,17 +38,17 @@ export function initControls(
         }
     }
 
-    // Event handler for mouseup
+    // Event handler per mouseup
     function onMouseUp(event) {
         isMouseDown = false;
     }
 
-    // Event handler for mouse click (strip selection)
+    // Event handler per click del mouse (selezione della striscia)
     function onMouseClick(event) {
-        // If the user is dragging the scene, do nothing
+        // Se l'utente sta trascinando la scena, non fare nulla
         if (isDragging) return;
 
-        // Calculate normalized mouse position
+        // Calcola la posizione normalizzata del mouse
         const rect = renderer.domElement.getBoundingClientRect();
         mouse.x =
             ((event.clientX - rect.left) / renderer.domElement.clientWidth) *
@@ -65,7 +65,7 @@ export function initControls(
             ledStrips.map(function (stripObj) {
                 return stripObj.mesh;
             }),
-            true // Include child objects
+            true // Includi gli oggetti figli
         );
 
         if (intersects.length > 0) {
@@ -80,7 +80,7 @@ export function initControls(
                 selectStrip(stripObj);
             }
         } else {
-            // Deselect the strip if clicking on empty space
+            // Deseleziona la striscia se si clicca su uno spazio vuoto
             deselectStrip();
         }
     }
