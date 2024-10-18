@@ -1264,7 +1264,7 @@ async function connectToSerial() {
     if ("serial" in navigator) {
         try {
             port = await navigator.serial.requestPort();
-            await port.open({ baudRate: 9600 });
+            await port.open({ baudRate: 115200 }); // Baud rate aumentato
 
             // Open the serial monitor window
             openSerialMonitor();
