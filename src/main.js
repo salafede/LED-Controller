@@ -46,7 +46,7 @@ let stripEditFolder; // Folder for strip editing
 
 // Object for BPM
 const tempoParams = {
-    tempo: 120, // Beats per minute
+    tempo: 128, // Beats per minute
 };
 
 // Object for auto-rotation
@@ -57,9 +57,9 @@ const autoRotateParams = {
 
 // New configuration parameters
 const configParams = {
-    glareIntensity: 0.5,
-    roomBrightness: 1,
-    ledPower: 3, // Default value set to 3
+    glareIntensity: 0.7,
+    roomBrightness: 0.4,
+    ledPower: 6, // Default value set to 3
 };
 
 // Variables for resizing
