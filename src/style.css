@@ -159,7 +159,7 @@ body {
 }
 
 .strip-label {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 20px;
     text-align: center;
     color: #ccc;
     line-height: 40px;
@@ -168,12 +168,13 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: relative;
     gap: 5px;
     border-radius: 5px;
     font-size: 12px;
     font-weight: 800;
+    width: 120px;
 }
 
 .strip-label .edit-icon {

@@ -72,12 +72,6 @@ void executeCommand(char *cmd) {
             if (ledNumber >= 1 && ledNumber <= numLEDs) {
                 int pin = ledPins[ledNumber - 1];
 
-                // Debugging: print the action and pin
-                // Serial.print("Action: ");
-                // Serial.println(action);
-                // Serial.print("Pin: ");
-                // Serial.println(pin);
-
                 if (strcmp(action, "ON") == 0) {
                     digitalWrite(pin, HIGH);
                 } else if (strcmp(action, "OFF") == 0) {
