@@ -123,7 +123,7 @@ void setup() {
 
     // Inizializza i pin dei bottoni come INPUT_PULLDOWN
     for (int i = 0; i < NUM_BUTTONS; i++) {
-        pinMode(buttonPins[i], INPUT_PULLDOWN);
+        pinMode(buttonPins[i], INPUT);
     }
 
     // Calcola l'intervallo tra i beat
